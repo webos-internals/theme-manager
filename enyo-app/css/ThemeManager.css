@@ -1,0 +1,1235 @@
+.blank-slider .enyo-sliding-view-shadow {
+	left: 0px;
+	background-image: url(../images/blank-sliding-shadow.png);
+} 
+
+.zip-files-list {
+	background: white;
+	opacity:0.6;
+	font-size: 14px;
+}
+
+.zip-files-list.selected {
+	opacity:1.0;
+}
+
+/*
+	Styles for Pre/Pre+/Pre2
+*/
+
+.theme-main-title {
+	margin-top: -13px;
+	margin-bottom: -5px;
+	text-align: center;
+	padding: 10px 0px;
+	font-size: 18px;
+}
+
+.theme-main-preview {
+	max-height: 255px;
+	max-width: 280px;
+}
+
+.theme-info-view {
+	margin: 0px auto 0px auto;
+	padding-bottom: 10px;
+	max-width: 100%;
+}
+
+.theme-info-section {
+	margin-left: 0px;
+	margin-top: 5px;
+	margin-bottom: 3px;
+}
+
+.theme-info-title {
+	font-size: 18px;
+	margin-bottom: -5px;
+	text-align: center;
+}
+
+.theme-info-description {
+	font-size: 16px;
+	padding: 0px 15px;
+}
+
+.theme-info-information {
+	font-size: 14px;
+	padding: 5px 15px 0px 15px;
+}
+
+.theme-info-donate-link {
+	text-align: center;
+	color: green;
+	font-weight: bold;
+	margin: 10px 0px;
+}
+
+.theme-info-screenshot {
+	max-height: 260px;
+	margin-bottom: 5px;
+}
+
+.theme-info-screenshots {
+	margin-bottom: 5px;
+	max-height: 60px;
+	height: 60px;
+/*	width: 1000px;*/
+}
+
+.theme-list-view {
+	margin: 0px 0px 0px 0px;
+	max-width: 100%;
+}
+
+.theme-list-title {
+	font-size: 16px;
+	margin-top: -2px;
+	margin-bottom: 2px;
+	margin-right: -5px;
+}
+
+.theme-list-description {
+	font-size: 12px;
+	margin: 0px 0px 0px 0px;
+	margin-right: -3px;
+}
+
+.theme-list-information {
+	font-size: 10px;
+	margin: 0px 0px 0px 1px;
+}
+
+.theme-list-screenshot {
+	margin: 2px 10px 0px 0px;
+	height: 80px;
+	max-height: 80px;
+}
+
+.theme-preview-background {
+	position: relative;
+	left: 30px;
+	max-width: 220px; 
+	width: 220px; 
+	max-height: 260px; 
+	height: 260px;
+	background-size: 220px 260px;	
+	background-image: url(/usr/lib/luna/system/luna-systemui/images/flowers.png); 
+}
+
+.theme-preview-status-bar {
+	position: relative; 
+	left: 30px; 
+	max-width: 220px;
+	top: -260px;
+	min-height: 18px;
+	background-color: #000000;
+}
+
+.theme-preview-corner-tl {
+	position: relative;
+	left: 30px; 
+	max-width: 18px;
+	top: -260px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-top-left.png);
+}
+
+.theme-preview-corner-tr {
+	position: relative; 
+	left: 232px; 
+	max-width: 18px;
+	top: -278px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-top-right.png);
+}
+
+.theme-preview-webos-text {
+	display: none;
+}
+
+.theme-preview-date-time {
+	position: relative; 
+	top: -314px; 
+	left: 127px;
+	color: white;
+	padding: 1px 10px 0px 0px;
+	font-size: 11px;
+	font-weigth:bold;
+}
+
+.theme-preview-just-type-l {
+	position: relative; 
+	left: 31px;
+	top: -310px;
+	min-height: 30px;
+	background-size: auto 30px; 
+	background-repeat: no-repeat; 
+	background-position: 0px 0px; 
+	width: 174px;
+	background-image: url(/usr/palm/sysmgr/images/search-pill.png);
+}
+
+.theme-preview-just-type-c {
+	display: none;
+}
+
+.theme-preview-just-type-r {
+	position: relative; 
+	left: 205px;
+	top: -340px;
+	min-height: 30px;
+	background-size: auto 30px; 
+	background-repeat: no-repeat; 
+	background-position: -156px 0px; 
+	background-image: url(/usr/palm/sysmgr/images/search-pill.png);
+}
+
+.theme-preview-just-type {
+	position: relative; 
+	top: -364px; 
+	left:45px;
+	color: white;
+	padding: 1px 10px 0px 0px;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.theme-preview-quick-launcher {
+	position: relative; 
+	top: -203px;
+	left:30px;
+	max-width: 220px;
+	min-height:60px;
+	background-repeat: repeat-x;
+	background-size: 240px 58px; 
+	background-image: url(/usr/palm/sysmgr/images/quick_launch_bg.png);
+}
+
+.theme-preview-corner-bl {
+	position: relative; 
+	left: 30px; 
+	max-width: 18px;
+	top: -223px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-bottom-left.png);
+}
+
+.theme-preview-corner-br {
+	position: relative; 
+	left: 232px; 
+	max-width: 18px;
+	top: -241px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-bottom-right.png);
+}
+
+.theme-preview-icon-phone {
+	background-image: url(../images/icon-phone.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -282px;
+	left: 41px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.theme-preview-icon-messaging {
+	background-image: url(../images/icon-messaging.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -314px;
+	left: 83px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.theme-preview-icon-browser {
+	background-image: url(../images/icon-browser.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -346px;
+	left: 125px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.theme-preview-icon-email {
+	background-image: url(../images/icon-email.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -378px;
+	left: 167px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.theme-preview-icon-calendar {
+	display: none;
+}
+
+.theme-preview-icon-launcher {
+	background-image: url(../images/icon-launcher.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -410px;
+	left: 209px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+/* 
+	Styles for VEER
+*/
+
+.device-emulator .theme-main-title,
+.device-veer .theme-main-title {
+	margin-top: -13px;
+	margin-bottom: -5px;
+	text-align: center;
+	padding: 10px 0px;
+	font-size: 18px;
+}
+
+.device-emulator .theme-main-preview,
+.device-veer .theme-main-preview {
+	max-height: 175px;
+	max-width: 280px;
+}
+
+.device-emulator .theme-info-view,
+.device-veer .theme-info-view {
+	margin: 0px auto 0px auto;
+	padding-bottom: 10px;
+	max-width: 100%;
+}
+
+.device-emulator .theme-info-section,
+.device-veer .theme-info-section {
+	margin-left: 0px;
+	margin-top: 5px;
+	margin-bottom: 3px;
+}
+
+.device-emulator .theme-info-title,
+.device-veer .theme-info-title {
+	font-size: 18px;
+	margin-bottom: -5px;
+	text-align: center;
+}
+
+.device-emulator .theme-info-description,
+.device-veer .theme-info-description {
+	font-size: 16px;
+	padding: 0px 15px;
+}
+
+.device-emulator .theme-info-information,
+.device-veer .theme-info-information {
+	font-size: 14px;
+	padding: 5px 15px 0px 15px;
+}
+
+.device-emulator .theme-info-donate-link,
+.device-veer .theme-info-donate-link {
+	text-align: center;
+	color: green;
+	font-weight: bold;
+	margin: 10px 0px;
+}
+
+.device-emulator .theme-info-screenshot,
+.device-veer .theme-info-screenshot {
+	max-height: 180px;
+	margin-bottom: 5px;
+}
+
+.device-emulator .theme-info-screenshots,
+.device-veer .theme-info-screenshots {
+	margin-bottom: 5px;
+	max-height: 60px;
+	height: 60px;
+/*	width: 1000px;*/
+}
+
+.device-emulator .theme-list-view,
+.device-veer .theme-list-view {
+	margin: 0px 0px 0px 0px;
+	max-width: 100%;
+}
+
+.device-emulator .theme-list-title,
+.device-veer .theme-list-title {
+	font-size: 16px;
+	margin-top: -2px;
+	margin-bottom: 2px;
+	margin-right: -5px;
+}
+
+.device-emulator .theme-list-description,
+.device-veer .theme-list-description {
+	font-size: 12px;
+	margin: 0px 0px 0px 0px;
+	margin-right: -3px;
+}
+
+.device-emulator .theme-list-information,
+.device-veer .theme-list-information {
+	font-size: 10px;
+	margin: 0px 0px 0px 1px;
+}
+
+.device-emulator .theme-list-screenshot,
+.device-veer .theme-list-screenshot {
+	margin: 2px 10px 0px 0px;
+	height: 80px;
+	max-height: 80px;
+}
+
+.device-emulator .theme-preview-background,
+.device-veer .theme-preview-background {
+	position: relative;
+	left: 30px;
+	max-width: 220px; 
+	width: 220px; 
+	max-height: 180px; 
+	height: 180px;
+	background-size: 220px 180px;
+	background-image: url(/usr/lib/luna/system/luna-systemui/images/flowers.png); 
+}
+
+.device-emulator .theme-preview-status-bar,
+.device-veer .theme-preview-status-bar {
+	position: relative; 
+	left: 30px; 
+	max-width: 220px;
+	top: -180px;
+	min-height: 18px;
+	background-color: #000000;
+}
+
+.device-emulator .theme-preview-corner-tl,
+.device-veer .theme-preview-corner-tl {
+	position: relative;
+	left: 30px; 
+	max-width: 18px;
+	top: -180px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-top-left.png);
+}
+
+.device-emulator .theme-preview-corner-tr,
+.device-veer .theme-preview-corner-tr {
+	position: relative; 
+	left: 232px; 
+	max-width: 18px;
+	top: -198px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-top-right.png);
+}
+
+.device-emulator .theme-preview-webos-text,
+.device-veer .theme-preview-webos-text {
+	display: none;
+}
+
+.device-emulator .theme-preview-date-time,
+.device-veer .theme-preview-date-time {
+	position: relative; 
+	top: -234px; 
+	left: 127px;
+	color: white;
+	padding: 1px 10px 0px 0px;
+	font-size: 11px;
+	font-weigth:bold;
+}
+
+.device-emulator .theme-preview-just-type-l,
+.device-veer .theme-preview-just-type-l {
+	position: relative; 
+	left: 31px;
+	top: -230px;
+	min-height: 30px;
+	background-size: auto 30px; 
+	background-repeat: no-repeat; 
+	background-position: 0px 0px; 
+	width: 174px;
+	background-image: url(/usr/palm/sysmgr/images/search-pill.png);
+}
+
+.device-emulator .theme-preview-just-type-c,
+.device-veer .theme-preview-just-type-c {
+	display: none;
+}
+
+.device-emulator .theme-preview-just-type-r,
+.device-veer .theme-preview-just-type-r {
+	position: relative; 
+	left: 205px;
+	top: -260px;
+	min-height: 30px;
+	background-size: auto 30px; 
+	background-repeat: no-repeat; 
+	background-position: -156px 0px; 
+	background-image: url(/usr/palm/sysmgr/images/search-pill.png);
+}
+
+.device-emulator .theme-preview-just-type,
+.device-veer .theme-preview-just-type {
+	position: relative; 
+	top: -284px; 
+	left:45px;
+	color: white;
+	padding: 1px 10px 0px 0px;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.device-emulator .theme-preview-quick-launcher,
+.device-veer .theme-preview-quick-launcher {
+	position: relative; 
+	top: -203px;
+	left:30px;
+	max-width: 220px;
+	min-height:60px;
+	background-repeat: repeat-x;
+	background-size: 240px 58px; 
+	background-image: url(/usr/palm/sysmgr/images/quick_launch_bg.png);
+}
+
+.device-emulator .theme-preview-corner-bl,
+.device-veer .theme-preview-corner-bl {
+	position: relative; 
+	left: 30px; 
+	max-width: 18px;
+	top: -223px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-bottom-left.png);
+}
+
+.device-emulator .theme-preview-corner-br,
+.device-veer .theme-preview-corner-br {
+	position: relative; 
+	left: 232px; 
+	max-width: 18px;
+	top: -241px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-bottom-right.png);
+}
+
+.device-emulator .theme-preview-icon-phone,
+.device-veer .theme-preview-icon-phone {
+	background-image: url(../images/icon-phone.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -282px;
+	left: 41px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.device-emulator .theme-preview-icon-messaging,
+.device-veer .theme-preview-icon-messaging {
+	background-image: url(../images/icon-messaging.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -314px;
+	left: 83px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.device-emulator .theme-preview-icon-browser,
+.device-veer .theme-preview-icon-browser {
+	background-image: url(../images/icon-browser.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -346px;
+	left: 125px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.device-emulator .theme-preview-icon-email,
+.device-veer .theme-preview-icon-email {
+	background-image: url(../images/icon-email.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -378px;
+	left: 167px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.device-emulator .theme-preview-icon-calendar,
+.device-veer .theme-preview-icon-calendar {
+	display: none;
+}
+
+.device-emulator .theme-preview-icon-launcher,
+.device-veer .theme-preview-icon-launcher {
+	background-image: url(../images/icon-launcher.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -410px;
+	left: 209px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+/*
+	Style for PRE3
+*/
+
+.device-emulator .theme-main-title,
+.device-pre3 .theme-main-title {
+	margin-top: -5px;
+	margin-bottom: -5px;
+	text-align: center;
+	padding: 10px 0px;
+	font-size: 20px;
+}
+
+.device-emulator .theme-main-preview,
+.device-pre3 .theme-main-preview {
+	max-height: 300px;
+	max-width: 280px;
+}
+
+.device-emulator .theme-info-view,
+.device-pre3 .theme-info-view {
+	margin: 0px auto 0px auto;
+	padding-bottom: 10px;
+	max-width: 100%;
+}
+
+.device-emulator .theme-info-section,
+.device-pre3 .theme-info-section {
+	margin-left: 0px;
+	margin-top: 5px;
+	margin-bottom: 3px;
+}
+
+.device-emulator .theme-info-title,
+.device-pre3 .theme-info-title {
+	font-size: 18px;
+	margin-bottom: -5px;
+	text-align: center;
+}
+
+.device-emulator .theme-info-description,
+.device-pre3 .theme-info-description {
+	font-size: 16px;
+	padding: 0px 15px;
+}
+
+.device-emulator .theme-info-information,
+.device-pre3 .theme-info-information {
+	font-size: 14px;
+	padding: 5px 15px 0px 15px;
+}
+
+.device-emulator .theme-info-donate-link,
+.device-pre3 .theme-info-donate-link {
+	text-align: center;
+	color: green;
+	font-weight: bold;
+	margin: 10px 0px;
+}
+
+.device-emulator .theme-info-screenshot,
+.device-pre3 .theme-info-screenshot {
+	max-height: 285px;
+	margin-bottom: 5px;
+}
+
+.device-emulator .theme-info-screenshots,
+.device-pre3 .theme-info-screenshots {
+	margin-bottom: 5px;
+	max-height: 60px;
+	height: 60px;
+/*	width: 1000px;*/
+}
+
+.device-emulator .theme-list-view,
+.device-pre3 .theme-list-view {
+	margin: 0px 0px 0px 0px;
+	max-width: 100%;
+}
+
+.device-emulator .theme-list-title,
+.device-pre3 .theme-list-title {
+	font-size: 16px;
+	margin-top: -2px;
+	margin-bottom: 2px;
+	margin-right: -5px;
+}
+
+.device-emulator .theme-list-description,
+.device-pre3 .theme-list-description {
+	font-size: 12px;
+	margin: 0px 0px 0px 0px;
+	margin-right: -3px;
+}
+
+.device-emulator .theme-list-information,
+.device-pre3 .theme-list-information {
+	font-size: 10px;
+	margin: 0px 0px 0px 1px;
+}
+
+.device-emulator .theme-list-screenshot,
+.device-pre3 .theme-list-screenshot {
+	/*margin: 0px 20px*/
+	margin: 2px 10px 0px 0px;
+	height: 80px;
+	max-height: 80px;
+}
+
+.device-emulator .theme-preview-background,
+.device-pre3 .theme-preview-background {
+	position: relative;
+	left: 30px;
+	max-width: 220px; 
+	width: 220px; 
+	max-height: 300px; 
+	height: 300px;
+	background-size: 220px 300px;
+	background-image: url(/usr/lib/luna/system/luna-systemui/images/flowers.png); 
+}
+
+.device-emulator .theme-preview-status-bar,
+.device-pre3 .theme-preview-status-bar {
+	position: relative; 
+	left: 30px; 
+	max-width: 220px;
+	top: -300px;
+	min-height: 18px;
+	background-color: #000000;
+}
+
+.device-emulator .theme-preview-corner-tl,
+.device-pre3 .theme-preview-corner-tl {
+	position: relative;
+	left: 30px; 
+	max-width: 18px;
+	top: -300px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-top-left.png);
+}
+
+.device-emulator .theme-preview-corner-tr,
+.device-pre3 .theme-preview-corner-tr {
+	position: relative; 
+	left: 232px; 
+	max-width: 18px;
+	top: -318px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-top-right.png);
+}
+
+.device-emulator .theme-preview-webos-text,
+.device-pre3 .theme-preview-webos-text {
+	display: none;
+}
+
+.device-emulator .theme-preview-date-time,
+.device-pre3 .theme-preview-date-time {
+	position: relative; 
+	top: -354px; 
+	left: 127px;
+	color: white;
+	padding: 1px 10px 0px 0px;
+	font-size: 11px;
+	font-weigth:bold;
+}
+
+.device-emulator .theme-preview-just-type-l,
+.device-pre3 .theme-preview-just-type-l {
+	position: relative; 
+	left: 31px;
+	top: -350px;
+	min-height: 30px;
+	background-size: auto 30px; 
+	background-repeat: no-repeat; 
+	background-position: 0px 0px; 
+	width: 174px;
+	background-image: url(/usr/palm/sysmgr/images/search-pill.png);
+}
+
+.device-emulator .theme-preview-just-type-c,
+.device-pre3 .theme-preview-just-type-c {
+	display: none;
+}
+
+.device-emulator .theme-preview-just-type-r,
+.device-pre3 .theme-preview-just-type-r {
+	position: relative; 
+	left: 205px;
+	top: -380px;
+	min-height: 30px;
+	background-size: auto 30px; 
+	background-repeat: no-repeat; 
+	background-position: -156px 0px; 
+	background-image: url(/usr/palm/sysmgr/images/search-pill.png);
+}
+
+.device-emulator .theme-preview-just-type,
+.device-pre3 .theme-preview-just-type {
+	position: relative; 
+	top: -404px; 
+	left:45px;
+	color: white;
+	padding: 1px 10px 0px 0px;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.device-emulator .theme-preview-quick-launcher,
+.device-pre3 .theme-preview-quick-launcher {
+	position: relative; 
+	top: -203px;
+	left:30px;
+	max-width: 220px;
+	min-height:60px;
+	background-repeat: repeat-x;
+	background-size: 240px 58px; 
+	background-image: url(/usr/palm/sysmgr/images/quick_launch_bg.png);
+}
+
+.device-emulator .theme-preview-corner-bl,
+.device-pre3 .theme-preview-corner-bl {
+	position: relative; 
+	left: 30px; 
+	max-width: 18px;
+	top: -223px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-bottom-left.png);
+}
+
+.device-emulator .theme-preview-corner-br,
+.device-pre3 .theme-preview-corner-br {
+	position: relative; 
+	left: 232px; 
+	max-width: 18px;
+	top: -241px;
+	min-height:18px;
+	background-size: 18px 18px; 
+	background-image: url(/usr/palm/sysmgr/images/wm-corner-bottom-right.png);
+}
+
+.device-emulator .theme-preview-icon-phone,
+.device-pre3 .theme-preview-icon-phone {
+	background-image: url(../images/icon-phone.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -282px;
+	left: 41px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.device-emulator .theme-preview-icon-messaging,
+.device-pre3 .theme-preview-icon-messaging {
+	background-image: url(../images/icon-messaging.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -314px;
+	left: 83px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.device-emulator .theme-preview-icon-browser,
+.device-pre3 .theme-preview-icon-browser {
+	background-image: url(../images/icon-browser.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -346px;
+	left: 125px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.device-emulator .theme-preview-icon-email,
+.device-pre3 .theme-preview-icon-email {
+	background-image: url(../images/icon-email.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -378px;
+	left: 167px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+.device-emulator .theme-preview-icon-calendar,
+.device-pre3 .theme-preview-icon-calendar {
+	display: none;
+}
+
+.device-emulator .theme-preview-icon-launcher,
+.device-pre3 .theme-preview-icon-launcher {
+	background-image: url(../images/icon-launcher.png);
+	background-size: 32px 32px; 
+	position: relative; 
+	top: -410px;
+	left: 209px;
+	min-height: 32px;
+	min-width: 32px;
+	max-width: 32px; 
+	width: 32px;
+}
+
+/*
+	Styles for TOUCHPAD
+*/
+
+.device-emulator .theme-main-title,
+.device-touchpad .theme-main-title {
+	margin-top: -5px;
+	margin-bottom: -5px;
+	text-align: center;
+	padding: 10px 0px;
+	font-size: 20px;
+}
+
+.device-emulator .theme-main-preview,
+.device-touchpad .theme-main-preview {
+	max-height: 215px;
+	max-width: 280px;
+}
+
+.device-emulator .theme-info-view,
+.device-touchpad .theme-info-view {
+	margin: 5px auto 0px auto;
+	max-width: 75%;
+}
+
+.device-emulator .theme-info-section,
+.device-touchpad .theme-info-section {
+	margin-left: -10px;
+	margin-top: 5px;
+	margin-bottom: 3px;
+}
+
+.device-emulator .theme-info-title,
+.device-touchpad .theme-info-title {
+	margin-bottom: -5px;
+	text-align: center;
+}
+
+.device-emulator .theme-info-description,
+.device-touchpad .theme-info-description {
+	font-size: 20px;
+	padding: 0px 10px;
+}
+
+.device-emulator .theme-info-information,
+.device-touchpad .theme-info-information {
+	font-size: 18px;
+	margin: 5px -5px;
+}
+
+.device-emulator .theme-info-donate-link,
+.device-touchpad .theme-info-donate-link {
+	text-align: center;
+	color: green;
+	font-weight: bold;
+	margin: 10px 0px;
+}
+
+.device-emulator .theme-info-screenshot,
+.device-touchpad .theme-info-screenshot {
+	max-height: 500px;
+}
+
+.device-emulator .theme-info-screenshots,
+.device-touchpad .theme-info-screenshots {
+	margin-bottom: 5px;
+	max-height: 60px;
+	height: 60px;
+	/*width: 1000px;*/
+}
+
+.device-emulator .theme-list-view,
+.device-touchpad .theme-list-view {
+	margin: 0px 0px 0px 0px;
+	max-width: 100%;
+}
+
+.device-emulator .theme-list-title,
+.device-touchpad .theme-list-title {
+	font-size: 18px;
+	margin-top: 3px;
+	margin-bottom: 10px;
+	margin-right: 0px;
+}
+
+.device-emulator .theme-list-description,
+.device-touchpad .theme-list-description {
+	font-size: 12px;
+	margin: -15px 0px 0px 0px;
+}
+
+.device-emulator .theme-list-information,
+.device-touchpad .theme-list-information {
+	font-size: 10px;
+	margin: 0px 0px 0px 1px;
+}
+
+.device-emulator .theme-list-screenshot,
+.device-touchpad .theme-list-screenshot {
+	margin: 3px 20px 0px 20px;
+	height: 80px;
+	max-height: 80px;
+}
+
+.device-emulator .theme-preview-background,
+.device-touchpad .theme-preview-background {
+	position: relative;
+	left: 0px;
+	max-width: 280px; 
+	width: 280px; 
+	max-height: 210px; 
+	height: 210px;
+	background-size: 280px 210px;
+	background-image: url(/usr/lib/luna/system/luna-systemui/images/flowers.png); 
+}
+
+.device-emulator .theme-preview-status-bar,
+.device-touchpad .theme-preview-status-bar {
+	position: relative; 
+	left: 0px; 
+	max-width: 280px;
+	top: -210px;
+	min-height: 7px;
+	background: none;
+	background-repeat: repeat-x;
+	background-size: auto 7px; 
+	background-image: url(/usr/palm/sysmgr/images/statusBar/status-bar-background.png);
+}
+
+.device-emulator .theme-preview-corner-tl,
+.device-touchpad .theme-preview-corner-tl {
+	display: none;
+}
+
+.device-emulator .theme-preview-corner-tr,
+.device-touchpad .theme-preview-corner-tr {
+	display: none;
+}
+
+.device-emulator .theme-preview-webos-text,
+.device-touchpad .theme-preview-webos-text {
+	display: block;
+	position: relative; 
+	top: -220px; 
+	left: 3px;
+	color: white;
+	padding: 2px 10px 0px 0px;
+	font-size: 6px;
+	font-weigth: bold;
+}
+
+.device-emulator .theme-preview-date-time,
+.device-touchpad .theme-preview-date-time {
+	position: relative; 
+	top: -230px; 
+	left: 265px;
+	color: white;
+	padding: 2px 10px 0px 0px;
+	font-size: 6px;
+	font-weigth: bold;
+}
+
+.device-emulator .theme-preview-just-type-l,
+.device-touchpad .theme-preview-just-type-l {
+	position: relative; 
+	left: -35px;
+	top: -228px;
+	min-height: 12px;
+	background-size: auto 12px; 
+	background-repeat: no-repeat; 
+	background-position: 100px 0px; 
+	width: 170px;
+	background-image: url(/usr/palm/sysmgr/images/search-pill.png);
+}
+
+.device-emulator .theme-preview-just-type-c,
+.device-touchpad .theme-preview-just-type-c {
+	display: block;
+	position: relative; 
+	left: 135px;
+	top: -240px;
+	min-height:12px;
+	background-size: auto 12px; 
+	background-repeat: no-repeat; 
+	background-position: -5px 0px; 
+	width: 60px;
+	background-image: url(/usr/palm/sysmgr/images/search-pill.png);
+}
+
+.device-emulator .theme-preview-just-type-r,
+.device-touchpad .theme-preview-just-type-r {
+	position: relative; 
+	left: 195px;
+	top: -252px;
+	min-height: 12px;
+	background-size: auto 12px; 
+	background-repeat: no-repeat; 
+	background-position: -60px 0px; 
+	width: 20px;	
+	background-image: url(/usr/palm/sysmgr/images/search-pill.png);
+}
+
+.device-emulator .theme-preview-just-type,
+.device-touchpad .theme-preview-just-type {
+	position: relative; 
+	top: -265px; 
+	left: 72px;
+	color: white;
+	padding: 2px 10px 0px 0px;
+	font-size: 6px;
+	font-style: italic;
+}
+
+.device-emulator .theme-preview-quick-launcher,
+.device-touchpad .theme-preview-quick-launcher {
+	position: relative; 
+	top: -100px;
+	left: 0px;
+	max-width: 300px;
+	min-height: 28px;
+	background-repeat: repeat-x;
+	background-size: auto 28px; 
+	background-image: url(/usr/palm/sysmgr/images/launcher3/quicklaunch-bg.png);
+}
+
+.device-emulator .theme-preview-corner-bl,
+.device-touchpad .theme-preview-corner-bl {
+	display: none;
+}
+
+.device-emulator .theme-preview-corner-br,
+.device-touchpad .theme-preview-corner-br {
+	display: none;
+}
+
+.device-emulator .theme-preview-icon-phone,
+.device-touchpad .theme-preview-icon-phone {
+	background-image: url(../images/icon-phone.png);
+	background-size: 17px 17px; 
+	position: relative; 
+	top: -122px;
+	left: 10px;
+	min-height: 17px;
+	min-width: 17px;
+	max-width: 17px; 
+	width: 17px;
+}
+
+.device-emulator .theme-preview-icon-messaging,
+.device-touchpad .theme-preview-icon-messaging {
+	background-image: url(../images/icon-messaging.png);
+	background-size: 17px 17px; 
+	position: relative; 
+	top: -139px;
+	left: 59px;
+	min-height: 17px;
+	min-width: 17px;
+	max-width: 17px; 
+	width: 17px;
+}
+
+.device-emulator .theme-preview-icon-browser,
+.device-touchpad .theme-preview-icon-browser {
+	background-image: url(../images/icon-browser.png);
+	background-size: 17px 17px; 
+	position: relative; 
+	top: -156px;
+	left: 108px;
+	min-height: 17px;
+	min-width: 17px;
+	max-width: 17px; 
+	width: 17px;
+}
+
+.device-emulator .theme-preview-icon-email,
+.device-touchpad .theme-preview-icon-email {
+	background-image: url(../images/icon-email.png);
+	background-size: 17px 17px; 
+	position: relative; 
+	top: -173px;
+	left: 157px;
+	min-height: 17px;
+	min-width: 17px;
+	max-width: 17px; 
+	width: 17px;
+}
+
+.device-emulator .theme-preview-icon-calendar,
+.device-touchpad .theme-preview-icon-calendar {
+	display: block;
+	background-image: url(../images/icon-calendar.png);
+	background-size: 17px 17px; 
+	position: relative; 
+	top: -190px;
+	left: 206px;
+	min-height: 17px;
+	min-width: 17px;
+	max-width: 17px; 
+	width: 17px;
+}
+
+.device-emulator .theme-preview-icon-launcher,
+.device-touchpad .theme-preview-icon-launcher {
+	background-image: url(/usr/palm/sysmgr/images/launcher3/launcher-icon-64.png);
+	background-size: 17px 17px; 
+	position: relative; 
+	top: -207px;
+	left: 255px;
+	min-height: 17px;
+	min-width: 17px;
+	max-width: 17px; 
+	width: 17px;
+}
+

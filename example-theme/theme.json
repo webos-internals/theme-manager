@@ -1,0 +1,108 @@
+{
+  "name": "Theme Name", // Mandatory
+  "version": "1.0.0", // Mandatory
+  
+  "description": "Description for the theme.", // Mandatory
+
+  "creator": "Authors Name", // Mandatory
+  "website": "", // Mandatory but can be left empty
+
+  "donations": "", // Optional donation link
+
+  "devices": [
+    // Mandatory list of supported devices, valid devices are
+    // emulator, touchpad, veer, pre3, pre (= pre,pre+,pre2)
+    
+    "emulator",
+    "touchpad"
+  ],
+
+  "screenshots": [ 
+    // Mandatory, at least one screenshot is required
+    
+    "data/default-view.png"
+  ],
+
+  "themedata": { 
+    // Mandatory, different data can be set for different webOS versions, 
+    // every supported version must be listed, the components that does 
+    // not exist in the theme should be removed. Components can contain 
+    // images, sounds and patches.
+
+    // Allowed files at the moment are, images: jpg/png, sounds: mp3/wav 
+    // and only files that can be patched are css files.
+  
+    "3.0.0": {
+      // You can refer to other version with alias if the version is 
+      // compatible. At the moment if they differ even the slightest
+      // amount you need to create new set, i.e. after alias you can
+      // not set any "overrides" at the moment.
+    
+      "alias": "3.0.2"
+    },
+    "3.0.2": {
+      // Path is always the path in the device and the file path to
+      // to the file inside the theme directory.
+    
+      "app_icons": {
+        "images": [
+          {
+            "path": "/usr/palm/applications/com.palm.app.phone/icon.png",
+            "file": "images/icon-phone.png"
+          }
+        ]
+      },
+      "app_launcher": {
+        "images": [
+          {
+            "path": "/usr/lib/luna/system/luna-applauncher/images/bg.png",
+            "file": "images/search-bg.png"
+          }
+        ]
+      },
+      "applications": {
+        "sounds": [
+          {
+            "path": "/media/internal/ringtones/Silent.mp3",
+            "file": "sounds/silent.mp3"
+          }
+        ],
+        "patches": [
+          {
+            "path": "/usr/palm/applications/com.palm.app.messaging/stylesheets/messaging.css",
+            "file": "patches/messaging-css.patch"
+          }
+        ]
+      },
+      
+      // If the component does not have images, sounds or patches then it can
+      // be left out, but these are listed here just as an example what components
+      // are supported.
+      
+      "enyo_widgets": {
+      },
+      "exhibition": {
+      },
+      "just_type": {
+      },
+      "keyboard": {
+      },
+      "lock_screen": {
+      },
+      "quick_launcher": {
+      },
+      "status_bar": {
+      },
+      "system_menus": {
+      },
+      "wallpapers": {
+        "images": [
+          {
+            "path": "/media/internal/wallpapers/wallpaper.jpg",
+            "file": "images/wallpaper.jpg"
+          }
+        ]
+      }
+    }
+  }
+}

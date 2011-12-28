@@ -1,0 +1,9 @@
+enyo.depends(
+	"css/ThemeManager.css",
+	"css/Wosi.css",	
+	"source/ThemeManager.js",
+	"source/Preview.js",
+	"source/Library.js",
+	"source/Wosi.js",
+	"source/Startup.js"
+);

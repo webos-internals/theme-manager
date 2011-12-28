@@ -1,0 +1,74 @@
+#!/bin/sh
+
+THEMES_DIR="/media/internal/.themes"
+
+SERVICE_DIR="/media/cryptofs/apps/usr/palm/services/org.webosinternals.thememanager.srv"
+
+if [ ! -f ${THEMES_DIR}/.current/theme.cfg ]; then
+  echo "No configuration file! This error should never happen."
+  exit 1
+fi
+
+if [ -f ${THEMES_DIR}/.current/theme.patch ] ||
+   [ -d ${THEMES_DIR}/.current/files ]
+then
+  sh ${SERVICE_DIR}/sh-scripts/prerm >/dev/null 2>&1
+
+  if [ "${?}" != "0" ]; then
+    echo "Removing of current theme failed! Aborting theme updating."
+
+    exit 1
+  fi
+
+  rm -f ${THEMES_DIR}/.current/theme.patch >/dev/null 2>&1
+
+  rm -rf ${THEMES_DIR}/.current/files >/dev/null 2>&1
+fi
+
+while read line ; do
+  TYPE=`echo ${line} | awk '{print $1}'`
+
+  SOURCE=`echo ${line} | awk '{print $2}'`
+  TARGET=`echo ${line} | awk '{print $3}'`
+
+  if [ "${TYPE}" = "files" ]; then
+    FILES_DIR="${THEMES_DIR}/.current/files"
+
+    mkdir -p ${FILES_DIR}/`dirname ${TARGET}` >/dev/null 2>&1
+
+    cp ${SOURCE} ${FILES_DIR}${TARGET} >/dev/null 2>&1
+
+    if [ "${?}" != "0" ]; then
+      rm -f ${THEMES_DIR}/.current/theme.patch >/dev/null 2>&1
+
+      rm -rf ${THEMES_DIR}/.current/files >/dev/null 2>&1
+
+      echo "Error in one of the theme files. File '${SOURCE}' does not exist!"
+
+      exit 1
+    fi
+  elif [ "${TYPE}" = "patch" ]; then
+    sed -e /"^diff "/d -e s:"^--- .*":"--- .orig/${TARGET}": \
+      -e s:"^+++ .*":"+++ ${TARGET}": ${SOURCE} \
+			>> ${THEMES_DIR}/.current/theme.patch
+  fi
+done < ${THEMES_DIR}/.current/theme.cfg
+
+if [ -f ${THEMES_DIR}/.current/theme.patch ] ||
+   [ -d ${THEMES_DIR}/.current/files ]
+then
+  sh ${SERVICE_DIR}/sh-scripts/postinst >/dev/null 2>&1
+
+  if [ "${?}" != "0" ]; then
+    echo "Installing of current theme failed! Aborting theme updating."
+
+    rm -f ${THEMES_DIR}/.current/theme.patch >/dev/null 2>&1
+
+    rm -rf ${THEMES_DIR}/.current/files >/dev/null 2>&1
+
+    exit 1
+  fi
+fi
+
+exit 0
+

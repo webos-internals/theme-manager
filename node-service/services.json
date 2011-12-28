@@ -1,0 +1,17 @@
+{
+	"description": "Theme Manager Service",
+	"id": "org.webosinternals.thememanager.srv",
+	"engine": "node",
+	"activityTimeout": 30,
+	"commandTimeout": 1800,
+	"services": [{
+		"name": "org.webosinternals.thememanager.srv",
+		"description": "Background service for Theme Manager",
+		"assistant": "ServiceAssistant",
+		"commands": [{ 
+			"name": "control", 
+			"assistant": "ControlAssistant",
+			"public": true
+		}] 
+	}]
+}

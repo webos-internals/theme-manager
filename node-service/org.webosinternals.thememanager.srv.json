@@ -1,0 +1,15 @@
+{
+	"role": {
+		"exeName": "js",
+		"type": "privileged",
+		"allowedNames": ["org.webosinternals.thememanager.srv"]
+	},
+	"permissions": [
+		{
+			"service": "org.webosinternals.thememanager.srv",
+			"inbound": ["*"],
+			"outbound": ["*"]
+		}
+	]
+}
+

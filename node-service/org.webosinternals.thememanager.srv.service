@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.webosinternals.thememanager.srv
+Exec=/var/usr/sbin/org.webosinternals.thememanager.srv

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+THEMES_DIR="/media/internal/.themes"
+
+mkdir -p ${THEMES_DIR}/.current >/dev/null 2>&1
+
+rm -f ${THEMES_DIR}/.current/packages >/dev/null 2>&1
+
+for p in `grep -l -e "\.jpg$" -e "\.png$" -e "\.mp3$" -e "\.wav$" -e "\.css$" \
+  /usr/lib/ipkg/info/*.list`
+do
+  pkg=`basename ${p} .list`
+
+  echo ${pkg} >>${THEMES_DIR}/.current/packages
+done
+
+exit 0
+

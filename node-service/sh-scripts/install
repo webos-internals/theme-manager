@@ -1,0 +1,45 @@
+#!/bin/sh
+
+THEMES_DIR="/media/internal/.themes"
+
+UNZIP_EXEC="/media/cryptofs/apps/usr/bin/unzip"
+
+if [ ! -x ${UNZIP_EXEC} ]; then
+  echo "No unzip installed! This error should never happen."
+  exit 1
+fi
+
+while [ ${#} -gt 0 ]; do
+  rm -rf ${THEMES_DIR}/.tmptheme >/dev/null 2>&1
+
+  mkdir -p ${THEMES_DIR}/.tmptheme >/dev/null 2>&1
+
+  ${UNZIP_EXEC} ${1} -d ${THEMES_DIR}/.tmptheme >/dev/null 2>&1
+
+  if [ "${?}" != "0" ]; then
+    FAILED_LIST="${FAILED_LIST} ${1}"
+  else
+    FILE=`ls ${THEMES_DIR}/.tmptheme/*/theme.json 2>/dev/null | head -n 1`
+
+    NAME=`basename $(dirname ${FILE} 2>/dev/null)`
+
+    if [ -z "${NAME}" ] || [ ! -d ${THEMES_DIR}/.tmptheme/${NAME} ]; then
+      FAILED_LIST="${FAILED_LIST} ${1}"
+    else
+      rm -rf ${THEMES_DIR}/${NAME} >/dev/null 2>&1
+
+      mv ${THEMES_DIR}/.tmptheme/${NAME} ${THEMES_DIR}/${NAME}
+    fi
+  fi
+
+  rm -rf ${THEMES_DIR}/.tmptheme >/dev/null 2>&1
+
+	shift
+done
+
+if [ ! -z "${FAILED_LIST}" ]; then
+  echo "${FAILED_LIST}"
+fi
+
+exit 0
+

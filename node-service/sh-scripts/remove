@@ -1,0 +1,13 @@
+#!/bin/sh
+
+THEMES_DIR="/media/internal/.themes"
+
+if [ -z ${1} ]; then
+  echo "No theme given for removing!"
+  exit 1
+fi
+
+rm -rf ${THEMES_DIR}/${1} >/dev/null 2>&1
+
+exit 0
+
