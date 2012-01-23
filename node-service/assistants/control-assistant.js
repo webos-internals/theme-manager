@@ -80,7 +80,7 @@ ControlAssistant.prototype.scanThemes = function(future, args) {
 					var stat = fs.statSync("/media/internal/.themes/" + themeDirs[dirIdx]);
 					
 					if((stat) && (stat.isDirectory())) {		
-						if((themeDirs[dirIdx] != ".current") && (themeDirs[dirIdx] != ".tmptheme") &&
+						if((themeDirs[dirIdx] != ".org.webosinternals.thememanager-theme") && (themeDirs[dirIdx] != ".tmptheme") &&
 							(themeDirs[dirIdx] != "custom") && (themeDirs[dirIdx] != "default"))
 						{		
 							var removable = true;
@@ -144,6 +144,8 @@ ControlAssistant.prototype.scanThemes = function(future, args) {
 												preview["Messaging Icon"] = "/media/internal/.themes/" + themeDirs[dirIdx] + "/" + jsonData.themedata[version].app_icons.images[i].file;
 											else if(jsonData.themedata[version].app_icons.images[i].path == "/usr/palm/applications/com.palm.app.messaging/1.5/icon.png")
 												preview["Messaging Icon"] = "/media/internal/.themes/" + themeDirs[dirIdx] + "/" + jsonData.themedata[version].app_icons.images[i].file;
+											else if(jsonData.themedata[version].app_icons.images[i].path == "/media/cryptofs/apps/usr/palm/applications/com.palm.app.messaging/icon.png")
+												preview["Messaging Icon"] = "/media/internal/.themes/" + themeDirs[dirIdx] + "/" + jsonData.themedata[version].app_icons.images[i].file;
 
 											else if(jsonData.themedata[version].app_icons.images[i].path == "/usr/palm/applications/com.palm.app.browser/icon.png")
 												preview["Browser Icon"] = "/media/internal/.themes/" + themeDirs[dirIdx] + "/" + jsonData.themedata[version].app_icons.images[i].file;
@@ -152,10 +154,14 @@ ControlAssistant.prototype.scanThemes = function(future, args) {
 												preview["Email Icon"] = "/media/internal/.themes/" + themeDirs[dirIdx] + "/" + jsonData.themedata[version].app_icons.images[i].file;
 											else if(jsonData.themedata[version].app_icons.images[i].path == "/usr/palm/applications/com.palm.app.email/1.5/icon.png")
 												preview["Email Icon"] = "/media/internal/.themes/" + themeDirs[dirIdx] + "/" + jsonData.themedata[version].app_icons.images[i].file;
+											else if(jsonData.themedata[version].app_icons.images[i].path == "/media/cryptofs/apps/usr/palm/applications/com.palm.app.email/icon.png")
+												preview["Email Icon"] = "/media/internal/.themes/" + themeDirs[dirIdx] + "/" + jsonData.themedata[version].app_icons.images[i].file;
 
 											else if(jsonData.themedata[version].app_icons.images[i].path == "/usr/palm/applications/com.palm.app.calendar/images/launcher/icon-1.png")
 												preview["Calendar Icon"] = "/media/internal/.themes/" + themeDirs[dirIdx] + "/" + jsonData.themedata[version].app_icons.images[i].file;
 											else if(jsonData.themedata[version].app_icons.images[i].path == "/usr/palm/applications/com.palm.app.calendar/images/launcher/1.5/icon-1.png")
+												preview["Calendar Icon"] = "/media/internal/.themes/" + themeDirs[dirIdx] + "/" + jsonData.themedata[version].app_icons.images[i].file;
+											else if(jsonData.themedata[version].app_icons.images[i].path == "/media/cryptofs/apps/usr/palm/applications/com.palm.app.calendar/images/launcher/icon-1.png")
 												preview["Calendar Icon"] = "/media/internal/.themes/" + themeDirs[dirIdx] + "/" + jsonData.themedata[version].app_icons.images[i].file;
 
 											else if(jsonData.themedata[version].app_icons.images[i].path == "/usr/palm/sysmgr/images/launcher3/launcher-icon-64.png")
@@ -369,7 +375,7 @@ ControlAssistant.prototype.applyTheme = function(future, args) {
 			}
 		}
 
-		var fd = fs.openSync("/media/internal/.themes/.current/theme.cfg", "w", 0644);
+		var fd = fs.openSync("/media/internal/.themes/.org.webosinternals.thememanager-theme/theme.cfg", "w", 0644);
 		
 		for(var i = 0; i < files.length; i++) {
 			var line = "files " + files[i].sourcePath + " " + files[i].targetPath + "\n";

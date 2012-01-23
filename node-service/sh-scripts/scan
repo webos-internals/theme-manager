@@ -2,16 +2,30 @@
 
 THEMES_DIR="/media/internal/.themes"
 
-mkdir -p ${THEMES_DIR}/.current >/dev/null 2>&1
+CURRENT_DIR="${THEMES_DIR}/.org.webosinternals.thememanager-theme"
 
-rm -f ${THEMES_DIR}/.current/packages >/dev/null 2>&1
+if [ -d ${THEMES_DIR}/.current ]; then
+  mkdir -p ${CURRENT_DIR} >/dev/null 2>&1
+
+  mv ${THEMES_DIR}/.current/theme.cfg ${CURRENT_DIR}/theme.cfg
+
+  mv ${THEMES_DIR}/.current/theme.patch ${CURRENT_DIR}/unified_diff.patch
+
+  mv ${THEMES_DIR}/.current/files ${CURRENT_DIR}/files_replaceable
+
+  rm -rf ${THEMES_DIR}/.current
+fi
+
+mkdir -p ${CURRENT_DIR} >/dev/null 2>&1
+
+rm -f ${CURRENT_DIR}/packages_cache.list >/dev/null 2>&1
 
 for p in `grep -l -e "\.jpg$" -e "\.png$" -e "\.mp3$" -e "\.wav$" -e "\.css$" \
   /usr/lib/ipkg/info/*.list`
 do
   pkg=`basename ${p} .list`
 
-  echo ${pkg} >>${THEMES_DIR}/.current/packages
+  echo ${pkg} >>${CURRENT_DIR}/packages_cache.list
 done
 
 exit 0

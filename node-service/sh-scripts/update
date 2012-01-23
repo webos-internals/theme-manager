@@ -2,17 +2,17 @@
 
 THEMES_DIR="/media/internal/.themes"
 
-SERVICE_DIR="/media/cryptofs/apps/usr/palm/services/org.webosinternals.thememanager.srv"
+CURRENT_DIR="${THEMES_DIR}/.org.webosinternals.thememanager-theme"
 
-if [ ! -f ${THEMES_DIR}/.current/theme.cfg ]; then
+if [ ! -f ${CURRENT_DIR}/theme.cfg ]; then
   echo "No configuration file! This error should never happen."
   exit 1
 fi
 
-if [ -f ${THEMES_DIR}/.current/theme.patch ] ||
-   [ -d ${THEMES_DIR}/.current/files ]
+if [ -f ${CURRENT_DIR}/unified_diff.patch ] ||
+   [ -d ${CURRENT_DIR}/files_replaceable ]
 then
-  sh ${SERVICE_DIR}/sh-scripts/prerm >/dev/null 2>&1
+  sh /media/cryptofs/apps/usr/bin/ausmt-remove ${CURRENT_DIR} >/dev/null 2>&1
 
   if [ "${?}" != "0" ]; then
     echo "Removing of current theme failed! Aborting theme updating."
@@ -20,9 +20,9 @@ then
     exit 1
   fi
 
-  rm -f ${THEMES_DIR}/.current/theme.patch >/dev/null 2>&1
+  rm -f ${CURRENT_DIR}/unified_diff.patch >/dev/null 2>&1
 
-  rm -rf ${THEMES_DIR}/.current/files >/dev/null 2>&1
+  rm -rf ${CURRENT_DIR}/files_replaceable >/dev/null 2>&1
 fi
 
 while read line ; do
@@ -32,16 +32,16 @@ while read line ; do
   TARGET=`echo ${line} | awk '{print $3}'`
 
   if [ "${TYPE}" = "files" ]; then
-    FILES_DIR="${THEMES_DIR}/.current/files"
+    FILES_DIR="${CURRENT_DIR}/files_replaceable"
 
     mkdir -p ${FILES_DIR}/`dirname ${TARGET}` >/dev/null 2>&1
 
     cp ${SOURCE} ${FILES_DIR}${TARGET} >/dev/null 2>&1
 
     if [ "${?}" != "0" ]; then
-      rm -f ${THEMES_DIR}/.current/theme.patch >/dev/null 2>&1
+      rm -f ${CURRENT_DIR}/unified_diff.patch >/dev/null 2>&1
 
-      rm -rf ${THEMES_DIR}/.current/files >/dev/null 2>&1
+      rm -rf ${CURRENT_DIR}/files_replaceable >/dev/null 2>&1
 
       echo "Error in one of the theme files. File '${SOURCE}' does not exist!"
 
@@ -50,21 +50,21 @@ while read line ; do
   elif [ "${TYPE}" = "patch" ]; then
     sed -e /"^diff "/d -e s:"^--- .*":"--- .orig/${TARGET}": \
       -e s:"^+++ .*":"+++ ${TARGET}": ${SOURCE} \
-			>> ${THEMES_DIR}/.current/theme.patch
+			>> ${CURRENT_DIR}/unified_diff.patch
   fi
-done < ${THEMES_DIR}/.current/theme.cfg
+done < ${CURRENT_DIR}/theme.cfg
 
-if [ -f ${THEMES_DIR}/.current/theme.patch ] ||
-   [ -d ${THEMES_DIR}/.current/files ]
+if [ -f ${CURRENT_DIR}/unified_diff.patch ] ||
+   [ -d ${CURRENT_DIR}/files_replaceable ]
 then
-  sh ${SERVICE_DIR}/sh-scripts/postinst >/dev/null 2>&1
+  sh /media/cryptofs/apps/usr/bin/ausmt-install ${CURRENT_DIR} >/dev/null 2>&1
 
   if [ "${?}" != "0" ]; then
     echo "Installing of current theme failed! Aborting theme updating."
 
-    rm -f ${THEMES_DIR}/.current/theme.patch >/dev/null 2>&1
+    rm -f ${CURRENT_DIR}/unified_diff.patch >/dev/null 2>&1
 
-    rm -rf ${THEMES_DIR}/.current/files >/dev/null 2>&1
+    rm -rf ${CURRENT_DIR}/files_replaceable >/dev/null 2>&1
 
     exit 1
   fi
