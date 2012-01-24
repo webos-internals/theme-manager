@@ -35,7 +35,7 @@ enyo.kind({
 					"close all your open applications. Do you want to restart Luna now?"},
 
 		{name: "serviceError", kind: "ModalDialog", caption: "Theme Applying Error", components: [
-			{content: "Something went wrong in applying the theme! See /media/internal/webos-themes.log for the error.", 
+			{content: "Something went wrong in applying the theme! See /media/internal/webos-ausmt.log for the error.", 
 				className: "enyo-text-error"}, 
 			{kind: "Button", caption: "OK", onclick: "handleErrorClosed", style: "margin-top: 10px;"}
 		]},

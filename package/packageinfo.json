@@ -2,7 +2,7 @@
   "id": "org.webosinternals.thememanager",
   "package_format_version": 2,
   "loc_name": "Theme Manager",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "icon": "icon.png",
   "miniicon": "icon.png",
   "vendor": "WebOS Internals",

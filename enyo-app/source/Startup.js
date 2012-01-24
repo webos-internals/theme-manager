@@ -22,6 +22,9 @@ enyo.kind({
 						"<li>Theme applying will take some time, might take even three to five minutes with big themes, so be patient</li>" +
 						"</ul><br>"},
 					
+					{kind: "Divider", caption: "0.9.6"},
+					{content: "<ul><li>Updated error messages to point to right log file</li></ul>"},
+
 					{kind: "Divider", caption: "0.9.5"},
 					{content: "<ul><li>Moved to using AUSMT scripts / directory structure</li>" +
 						"<li>Fixed icons preview for latest webOS release</li></ul>"},
