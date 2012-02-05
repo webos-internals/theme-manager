@@ -365,8 +365,11 @@ ControlAssistant.prototype.applyTheme = function(future, args) {
 									var path = jsonData.themedata[version][componentId].patches[i].path;
 									var file = jsonData.themedata[version][componentId].patches[i].file;
 
-									if((path.slice(-4).toLowerCase() == ".css") || (path.slice(-11).toLowerCase() == "/index.html"))
+									if((path.slice(-4).toLowerCase() == ".css") || (path.slice(-5).toLowerCase() == ".json") || 
+										(path.slice(-11).toLowerCase() == "/index.html"))
+									{
 										patch.push({sourcePath: themeDir + file, targetPath: path});
+									}
 								}
 							}
 						}

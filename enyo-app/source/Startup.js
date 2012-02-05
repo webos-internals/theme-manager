@@ -22,6 +22,12 @@ enyo.kind({
 						"<li>Theme applying will take some time, might take even three to five minutes with big themes, so be patient</li>" +
 						"</ul><br>"},
 					
+					{kind: "Divider", caption: "1.0.0"},
+					{content: "<ul><li>First public release of Theme Manager</li></ul>"},
+
+					{kind: "Divider", caption: "0.9.9"},
+					{content: "<ul><li>Allowed patching of json translation files</li></ul>"},
+
 					{kind: "Divider", caption: "0.9.6"},
 					{content: "<ul><li>Updated error messages to point to right log file</li></ul>"},
 
