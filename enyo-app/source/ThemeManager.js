@@ -196,6 +196,10 @@ enyo.kind({
 		this._version = enyo.fetchDeviceInfo().platformVersionMajor +
 			"." + enyo.fetchDeviceInfo().platformVersionMinor;
 
+		// webOS CE 3.1 / 3.2: reuse the 3.0 default theme (no entry for these versions)
+		if(!this._defaultThemes["3.1"]) this._defaultThemes["3.1"] = this._defaultThemes["3.0"];
+		if(!this._defaultThemes["3.2"]) this._defaultThemes["3.2"] = this._defaultThemes["3.0"];
+
 		if((localStorage) && (localStorage["version"])) {
 			version = localStorage["version"];
 

@@ -22,6 +22,9 @@ enyo.kind({
 						"<li>Theme applying will take some time, might take even three to five minutes with big themes, so be patient</li>" +
 						"</ul><br>"},
 					
+					{kind: "Divider", caption: "1.0.1"},
+					{content: "<ul><li>Fixed endless loading spinner on webOS 3.1 and 3.2 (webOS CE)</li></ul>"},
+
 					{kind: "Divider", caption: "1.0.0"},
 					{content: "<ul><li>First public release of Theme Manager</li></ul>"},
 
